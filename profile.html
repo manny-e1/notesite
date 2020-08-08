@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ template "head.html" .}}
+    <link rel="stylesheet" href="asset/css/home.css" />
+    <title>Title</title>
+</head>
+<body>
+{{ template "navbar.html" . }}
+
+
+   <div class="header">
+        <div class="image">
+            <img
+                    class="img-responsive rounded-circle img"
+                    src='asset/files/{{ .Values.Get "propic" }}'
+                    alt="Profile Picture"
+            />
+        </div>
+   </div>
+
+<div class="container">
+        <p>
+            <font color= "brown" > Department: {{ .User.Course }}</font>
+            <br/>
+            <font color= "brown" > Role: {{ .User.Role }} </font>
+            <br/>
+            <font color= "brown" > Gender: {{ .User.Gender }}</font>
+            <br/>
+            <font color="brown">  Email: {{ .User.Email }}</font>
+            <br />
+            <font color="brown"> Join Date: {{ .User.Joindate }}</font>
+            <br/>
+            <font color="brown" > Bio: {{ .User.About }}</font>
+        </p>
+</div>
+<script src="asset/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="asset/vendor/bootstrap/js/popper.js"></script>
+<script src="asset/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>

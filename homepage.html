@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="asset/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+   {{ template "datatable.html" .}}
+    <title>Homepage</title>
+  </head>
+  <body>
+
+{{ template "navbar.html" . }}
+    <h3 class="page-header">
+      <center>
+        <marquee width="70%"
+          ><font color="green">below are all the uploaded notes!</font></marquee
+        >
+      </center>
+    </h3>
+{{.Values.Get "name"}}
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="table-responsive">
+            <table id="table" class="table table-bordered table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Type</th>
+                  <th>Uploaded by</th>
+                  <th>Uploaded on</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                 {{ range .Note }}
+                  <tr>
+                    <td> {{ .Title }} </td>
+                    <td> {{ .File_Description }} </td>
+                    <td> {{ .File_Type }} </td>
+                    <td><a href="/profile?id={{ .File_Uploader_ID }}" > {{ .File_Uploader}} </a> </td>
+                    <td>{{ .File_Uploaded_On }}</td>
+                    <td> <a href="files/{{.File_Path}}" > Download </a> </td>
+                  </tr>
+                {{ end }}
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="asset/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <title>Title</title>
+</head>
+<body>
+{{ template "navbar.html" . }}
+
+<div class="wrap" id="page-wrapper">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="well well-sm">
+                                <div class="row">
+
+                                    <img class="img-responsive rounded-circle img"
+                                         width="200" src='asset/files/{{ .Values.Get "propic" }}'  alt="propic"/>
+                                </div>
+                                <div class="col-sm-6 col-md-8">
+                                    <h4>
+                                    </h4>
+                                    <p>
+                                        <font color= "brown" > Department: {{ .User.Course }}</font>
+                                        <br/>
+                                        <font color= "brown" > Role: {{ .User.Role }} </font>
+                                        <br/>
+                                        <font color= "brown" > Gender: {{ .User.Gender }}</font>
+                                        <br/>
+                                        <font color="brown">  Email: {{ .User.Email }}</font>
+                                        <br />
+                                        <font color="brown"> Join Date: {{ .User.Joindate }}</font>
+                                        <br/>
+                                        <font color="brown" > Bio: {{ .User.About }}</font>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="asset/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="asset/vendor/bootstrap/js/popper.js"></script>
+<script src="asset/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>

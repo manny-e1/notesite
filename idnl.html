@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ template "head.html" .}}
+    <link rel="stylesheet" href="asset/css/css/responsive.css" />
+    <link rel="stylesheet" href="asset/css/css/styles.css" />
+    <title>Title</title>
+  </head>
+  <body>
+  {{ template "navbar.html" . }}
+    <section class="intro-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1 col-lg-2"></div>
+          <div class="col-md-10 col-lg-8">
+            <div class="intro">
+              <div class="profile-img">
+                <a href='asset/files/{{ .Values.Get "propic" }}'
+                  ><img class="img"  src='asset/files/{{ .Values.Get "propic" }}' alt=""
+                /></a>
+              </div>
+              <h2><b>Michel SMith</b></h2>
+              <h4 class="font-yellow">Key Account Manager</h4>
+              <ul class="information margin-tb-30">
+                <li><b>BORN : </b>August 25, 1987</li>
+                <li><b>EMAIL : </b>mymith@mywebpage.com</li>
+                <li><b>MARITAL STATUS : </b> Married</li>
+              </ul>
+             
+            </div>
+            <!-- intro -->
+          </div>
+          <!-- col-sm-8 -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+    <!-- intro-section -->
+
+    <section class="portfolio-section section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+           
+          </div>
+          <!-- col-sm-4 -->
+          <div class="col-sm-8">
+            <div class="portfolioFilter clearfix margin-b-80">
+              <a href="#" data-filter="*" class="current"><h3>Posts</h3></a>
+              <a href="#" data-filter=".web-design" class="notes"><h3>Notes</h3></a>
+            </div>
+            <!-- portfolioFilter -->
+          </div>
+          <!-- col-sm-8 -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </section>
+
+      <script src="asset/vendor/jquery/jquery-3.2.1.min.js"></script>
+      <script src="asset/vendor/bootstrap/js/popper.js"></script>
+      <script src="asset/vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
